@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana MDQ | CVs Profesionales</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root { --accent: #00f2ff; --dark: #0a0a0a; --light: #ffffff; }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* NAVBAR Y LOGO */
+        .navbar { background-color: var(--dark); border-bottom: 2px solid var(--accent); padding: 10px 0; }
+        .logo-box {
+            background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            border: 2px solid var(--accent); box-shadow: 0 0 15px rgba(0, 242, 255, 0.8);
+            width: 55px; height: 55px; overflow: hidden;
+        }
+        .logo-nav { height: 100%; width: 100%; object-fit: cover; }
+
+        /* HERO */
+        .hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); color: white; padding: 80px 0 60px; }
+        
+        /* FOTO PERFIL */
+        .foto-perfil {
+            width: 280px; height: 280px; object-fit: cover; border-radius: 50%;
+            border: 5px solid var(--accent); box-shadow: 0 20px 50px rgba(0, 242, 255, 0.3);
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+        /* PRESENTACIÓN */
+        .presentacion-box { background: white; border-radius: 30px; padding: 40px; border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .feature-box { text-align: center; padding: 20px 15px; border-radius: 20px; background: #f8f9fa; border: 1px solid #eee; transition: 0.3s; height: 100%; }
+        .feature-box:hover { background: #f0fdff; border-color: var(--accent); transform: scale(1.02); }
+        .feature-box i { font-size: 2.2rem; color: #008fa5; margin-bottom: 12px; display: block; }
+
+        /* CARDS */
+        .card-custom { border: none; border-radius: 25px; transition: 0.3s; background: white; border: 1px solid #eee; position: relative; }
+        .card-custom:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .card-premium { border: 2px solid var(--accent); background: #f0fdff; }
+        .entrega-tag { font-size: 0.85rem; font-weight: 700; color: #008fa5; margin-bottom: 10px; display: block; text-transform: uppercase; }
+        
+        /* BOTONES */
+        .btn-demo { 
+            background: white; color: #008fa5; border: 2px solid #008fa5; 
+            padding: 8px 20px; border-radius: 50px; font-weight: bold; 
+            margin-top: 15px; text-decoration: none; display: inline-block; transition: 0.3s;
+        }
+        .btn-demo:hover { background: #008fa5; color: white; }
+        .btn-secundario { color: #008fa5; font-size: 0.9rem; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; cursor: pointer; border: none; background: none; }
+
+        /* CHECKOUT */
+        .checkout-bar {
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            background: rgba(0,0,0,0.95); backdrop-filter: blur(10px);
+            color: white; padding: 15px 35px; border-radius: 100px;
+            display: none; align-items: center; gap: 30px; z-index: 2000; border: 1px solid var(--accent);
+        }
+        .btn-wa { background: #25d366; color: white; border: none; padding: 12px 25px; border-radius: 50px; font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-box">
+                    <img src="Img/Logo-ana-mdq.png" class="logo-nav" alt="Logo">
+                </div>
+                <span class="ms-3 text-white fw-bold">ANA MDQ</span>
+            </a>
+            <div class="d-flex gap-2">
+                <span class="badge bg-dark border border-info text-info">ES</span>
+                <span class="badge bg-dark border border-info text-info">IT</span>
+                <span class="badge bg-dark border border-info text-info">EN</span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Un buen CV te abre las <span style="color: var(--accent);">puertas</span></h1>
+            <p class="lead opacity-75">Diseño profesional en PDF para que tu perfil destaque de verdad.</p>
+        </div>
+    </header>
+
+    <section class="container my-5 py-4">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-7">
+                <div class="presentacion-box">
+                    <h2 class="fw-bold mb-3">Hola, soy <span style="color: #008fa5;">Yesi</span></h2>
+                    <p class="fs-5 text-secondary">
+                        Soy <strong>Fullstack Developer & Analista de Datos</strong>. Sé lo que buscan las empresas hoy: claridad, orden y un perfil que resuelva problemas.
+                    </p>
+                    
+                    <div class="row g-3 mt-4">
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="bi bi-pencil-square"></i>
+                                <h6>Diseño Limpio</h6>
+                                <p>Formatos modernos que dan gusto leer.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <h6>Orden Lógico</h6>
+                                <p>Resaltamos lo que los reclutadores quieren ver.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature-box">
+                                <i class="bi bi-rocket-takeoff"></i>
+                                <h6>Impacto Directo</h6>
+                                <p>Tu experiencia contada de forma profesional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <img src="Img/ImagenYesi.jpg" class="foto-perfil" alt="Yesi">
+            </div>
+        </div>
+    </section>
+
+    <section id="planes" class="py-5 bg-white text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-5">Nuestros Planes</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="card card-custom p-5 h-100">
+                        <span class="entrega-tag"><i class="bi bi-lightning-charge-fill"></i> Entrega en 24hs</span>
+                        <h3 class="fw-bold">CV en PDF</h3>
+                        <p class="text-muted">Diseño profesional armado en Canva con criterio técnico.</p>
+                        <div class="display-5 fw-bold my-3">$8.000</div>
+                        <p class="badge bg-danger mb-4">SEÑA $4.000</p>
+                        <button onclick="comprar('CV PDF Estándar', 8000, 4000)" class="btn btn-dark w-100 rounded-pill py-3 fw-bold">RESERVAR AHORA</button>
+                        <a href="#modelos" class="btn-secundario">VER MODELOS DISPONIBLES →</a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card card-custom card-premium p-5 h-100">
+                        <span class="entrega-tag"><i class="bi bi-clock-history"></i> Entrega en 4 días</span>
+                        <h3 class="fw-bold">Premium Web</h3>
+                        <p class="text-muted">Landing Page personal + PDF + QR interactivo.</p>
+                        <div class="display-5 fw-bold my-3 text-info">$30.000</div>
+                        <p class="badge bg-danger mb-4">SEÑA $15.000</p>
+                        <button onclick="comprar('Perfil Web Premium', 30000, 15000)" class="btn btn-info text-white w-100 rounded-pill py-3 fw-bold shadow-sm">SOLICITAR WEB 🚀</button>
+                        <a href="demo.html" class="btn-demo"><i class="bi bi-eye"></i> VER DEMO ONLINE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modelos" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-5">Catálogo de Modelos</h2>
+            <div class="row g-4">
+                <div class="col-6 col-lg-3"><img src="Img/Modelo1.png" class="img-fluid rounded-4 border shadow-sm"></div>
+                <div class="col-6 col-lg-3"><img src="Img/Modelo2.png" class="img-fluid rounded-4 border shadow-sm"></div>
+                <div class="col-6 col-lg-3"><img src="Img/Modelo3.png" class="img-fluid rounded-4 border shadow-sm"></div>
+                <div class="col-6 col-lg-3"><img src="Img/Modelo4.png" class="img-fluid rounded-4 border shadow-sm"></div>
+            </div>
+        </div>
+    </section>
+
+    <div id="checkout" class="checkout-bar">
+        <div>
+            <span id="planName" class="fw-bold text-info"></span>
+            <div class="small opacity-50">Total: $<span id="planPrice"></span></div>
+        </div>
+        <a href="#" id="waBtn" class="btn-wa">RESERVAR POR WHATSAPP <i class="bi bi-whatsapp"></i></a>
+    </div>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        <p class="mb-0 opacity-50 small">ANA MDQ | MAR DEL PLATA | 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        const miNumero = "5492236683498"; 
+
+        function comprar(nombre, precio, sena) {
+            confetti({ particleCount: 150, spread: 70, origin: { y: 0.8 }, colors: ['#00f2ff', '#ffffff'] });
+            const msg = `Hola Yesi! Quiero el plan *${nombre}* ($${precio}). Pasame los datos para la seña de $${sena}.`;
+            document.getElementById('planName').innerText = nombre;
+            document.getElementById('planPrice').innerText = precio;
+            document.getElementById('waBtn').href = `https://wa.me/${miNumero}?text=${encodeURIComponent(msg)}`;
+            document.getElementById('checkout').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
