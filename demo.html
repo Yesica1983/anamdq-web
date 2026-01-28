@@ -7,8 +7,7 @@
     <title>Demo Premium | Marcos Maldonado</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -20,7 +19,6 @@
                         nFucsia: '#ff22ff',
                         nCyan: '#00f2ff',
                         nAmarillo: '#ffee55',
-                        darkPanel: '#111111',
                     }
                 }
             }
@@ -39,17 +37,22 @@
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
+            border-radius: 28px;
         }
 
         .bg-fijo {
-            background-image:
-                linear-gradient(to bottom, rgba(5, 5, 5, 0.4) 0%, rgba(5, 5, 5, 0.8) 50%, #050505 100%),
+            background-image: 
+                linear-gradient(to bottom, rgba(5, 5, 5, 0.7) 0%, #050505 100%),
                 url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
-            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff22ff, #00f2ff);
+            border-radius: 20px;
         }
 
         .sello-rotate {
@@ -57,156 +60,120 @@
         }
 
         @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #ff22ff, #00f2ff);
-            box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
-            border-radius: 20px;
-        }
-
-        .glow-cyan {
-            text-shadow: 0 0 20px rgba(0, 242, 255, 0.6);
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
 
-<body class="overflow-x-hidden bg-fijo">
+<body class="overflow-x-hidden bg-fijo min-h-screen">
 
-    <a href="index.html"
-        class="fixed top-6 left-6 z-50 w-11 h-11 glass-card flex items-center justify-center hover:bg-nFucsia transition-all duration-300 group">
-        <i class="bi bi-arrow-left text-white group-hover:scale-125"></i>
+    <a href="index.html" class="fixed top-6 left-6 z-50 w-10 h-10 glass-card flex items-center justify-center hover:bg-nCyan hover:text-black transition-all">
+        <i class="bi bi-arrow-left"></i>
     </a>
 
-    <section class="relative h-[45vh] flex items-center justify-center overflow-hidden">
-        <div class="relative z-10 text-center" data-aos="fade-down">
-            <span
-                class="px-4 py-1 rounded-full border border-nAmarillo text-nAmarillo text-[10px] tracking-[4px] font-bold uppercase bg-black/40 backdrop-blur-sm">
+    <section class="relative pt-20 pb-10 flex flex-col items-center justify-center text-center px-6">
+        <div data-aos="fade-down">
+            <span class="px-4 py-1 rounded-full border border-nAmarillo/30 text-nAmarillo text-[9px] tracking-[4px] font-bold uppercase bg-black/40">
                 Perfil Verificado
             </span>
-            <h2 class="text-4xl md:text-5xl font-extrabold mt-4 tracking-tighter uppercase text-white">
-                Portfolio <span class="text-nCyan glow-cyan">Profesional</span>
+            <h2 class="text-3xl md:text-5xl font-black mt-8 tracking-tighter uppercase text-white leading-tight">
+                Portfolio <br class="md:hidden"> <span class="text-nCyan">Profesional</span>
             </h2>
         </div>
     </section>
 
-    <div class="max-w-lg mx-auto px-6 -mt-20 relative z-20 pb-20">
+    <main class="max-w-xl mx-auto px-6 relative z-20 pb-24">
 
-        <div class="flex flex-col items-center" data-aos="zoom-in">
-            <div
-                class="p-1.5 rounded-[40px] bg-gradient-to-tr from-nFucsia via-nCyan to-nAmarillo shadow-[0_0_40px_rgba(0,242,255,0.4)]">
-                <img src="Img/ImagenMarcos.jpg" class="w-40 h-40 object-cover rounded-[38px] border-4 border-black"
-                    alt="Marcos Maldonado">
+        <div class="flex flex-col items-center mb-12" data-aos="zoom-in">
+            <div class="p-1 rounded-[40px] bg-gradient-to-tr from-nFucsia via-nCyan to-nAmarillo shadow-lg mb-6">
+                <img src="Img/ImagenMarcos.jpg" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-[38px] border-4 border-black" alt="Marcos">
             </div>
-
-            <h1 class="text-3xl font-black mt-6 tracking-tight uppercase text-white">Marcos Maldonado</h1>
-            <p class="text-nAmarillo font-semibold text-xs tracking-[3px] uppercase mt-2">Mecánico Especialista
-                Industrial</p>
+            <h1 class="text-3xl md:text-4xl font-black tracking-[2px] uppercase text-white text-center leading-relaxed">
+                Marcos <span class="text-nCyan">Maldonado</span>
+            </h1>
+            <p class="text-nAmarillo font-bold text-[10px] tracking-[4px] uppercase mt-4 opacity-80">Mecánico Especialista Industrial</p>
         </div>
 
-        <div class="grid grid-cols-2 gap-4 mt-10" data-aos="fade-up">
-            <a href="https://wa.me/5492236683498?text=Hola%20Ana%20MDQ!%20Vi%20la%20demo%20de%20Marcos%20y%20quiero%20información%20sobre%20los%20portfolios%20web"
-                class="flex items-center justify-center gap-2 bg-nCyan text-black font-black py-4 rounded-2xl hover:brightness-110 transition-all text-xs uppercase shadow-lg shadow-nCyan/20">
-                <i class="bi bi-whatsapp text-lg"></i> WhatsApp
+        <div class="grid grid-cols-2 gap-4 mb-16" data-aos="fade-up">
+            <a href="https://wa.me/5492236683498" class="flex items-center justify-center gap-2 bg-nCyan text-black font-black py-4 rounded-2xl text-[10px] uppercase shadow-lg shadow-nCyan/20 hover:scale-105 transition-transform">
+                <i class="bi bi-whatsapp"></i> WhatsApp
             </a>
-            <a href="https://wa.me/5492236683498?text=Hola%20Ana!%20Te%20llamo%20porque%20quiero%20consultar%20por%20una%20web%20como%20la%20de%20la%20demo"
-                class="flex items-center justify-center gap-2 bg-white text-black font-black py-4 rounded-2xl hover:bg-gray-200 transition-all text-xs uppercase">
-                <i class="bi bi-telephone-fill text-lg"></i> Llamar
+            <a href="tel:5492236683498" class="flex items-center justify-center gap-2 bg-white text-black font-black py-4 rounded-2xl text-[10px] uppercase hover:scale-105 transition-transform">
+                <i class="bi bi-telephone-fill"></i> Llamar
             </a>
         </div>
 
-        <div class="glass-card p-7 mt-8" data-aos="fade-up">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="h-[2px] w-8 bg-nFucsia shadow-[0_0_10px_#ff22ff]"></div>
-                <span class="text-[10px] font-bold tracking-widest text-nFucsia uppercase">Perfil Técnico</span>
+        <div class="glass-card p-8 mb-8" data-aos="fade-up">
+            <div class="flex items-center gap-3 mb-10">
+                <div class="h-[2px] w-6 bg-nAmarillo"></div>
+                <span class="text-[9px] font-bold tracking-widest text-nAmarillo uppercase">Experiencia Profesional</span>
             </div>
-            <p class="text-sm text-gray-300 leading-relaxed italic">
-                Especialista en mantenimiento preventivo y gestión de talleres pesados.
-                <span class="text-white font-medium">Enfocado en la eficiencia operativa y seguridad industrial en
-                    entornos portuarios.</span>
-            </p>
+
+            <div class="relative border-l border-white/10 ml-2 space-y-12">
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-nCyan shadow-[0_0_10px_#00f2ff]"></div>
+                    <h4 class="text-base font-extrabold text-white">Jefe de Mantenimiento</h4>
+                    <p class="text-[9px] text-nCyan font-bold uppercase tracking-widest mt-1">Logística Naval | 2020 - Actualidad</p>
+                    <p class="text-[11px] text-gray-400 mt-3 leading-relaxed italic">Gestión de flotas y supervisión de reparaciones críticas en entorno portuario.</p>
+                </div>
+                
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-gray-500"></div>
+                    <h4 class="text-base font-bold text-gray-200">Técnico Mecánico Senior</h4>
+                    <p class="text-[9px] text-gray-500 font-bold uppercase tracking-widest mt-1">Carga Pesada S.A. | 2014 - 2020</p>
+                    <p class="text-[11px] text-gray-400 mt-3 leading-relaxed italic">Especialista en motores diésel de alta potencia y transmisiones.</p>
+                </div>
+
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-gray-700"></div>
+                    <h4 class="text-base font-bold text-gray-400">Operario de Maquinaria</h4>
+                    <p class="text-[9px] text-gray-600 font-bold uppercase tracking-widest mt-1">Maquinarias Mar del Plata | 2010 - 2014</p>
+                    <p class="text-[11px] text-gray-500 mt-3 leading-relaxed italic">Mantenimiento preventivo y operación de equipos industriales.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="glass-card p-7 mt-6" data-aos="fade-up">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="h-[2px] w-8 bg-nCyan shadow-[0_0_10px_#00f2ff]"></div>
-                <span class="text-[10px] font-bold tracking-widest text-nCyan uppercase">Habilidades</span>
+        <div class="glass-card p-8" data-aos="fade-up">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="h-[2px] w-6 bg-nFucsia"></div>
+                <span class="text-[9px] font-bold tracking-widest text-nFucsia uppercase">Habilidades Técnicas</span>
             </div>
-
-            <div class="space-y-5">
+            <div class="space-y-6">
                 <div>
-                    <div class="flex justify-between text-[10px] font-bold mb-2 uppercase text-gray-400">
+                    <div class="flex justify-between text-[9px] font-bold mb-2 uppercase text-gray-400">
                         <span>Motores Diesel</span> <span class="text-nCyan">95%</span>
                     </div>
-                    <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                    <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
                         <div class="progress-fill" style="width: 95%"></div>
                     </div>
                 </div>
                 <div>
-                    <div class="flex justify-between text-[10px] font-bold mb-2 uppercase text-gray-400">
-                        <span>Sistemas Hidráulicos</span> <span class="text-nCyan">80%</span>
+                    <div class="flex justify-between text-[9px] font-bold mb-2 uppercase text-gray-400">
+                        <span>Hidráulica y Neumática</span> <span class="text-nCyan">80%</span>
                     </div>
-                    <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                    <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
                         <div class="progress-fill" style="width: 80%"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="glass-card p-7 mt-6" data-aos="fade-up">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="h-[2px] w-8 bg-nAmarillo shadow-[0_0_10px_#ffee55]"></div>
-                <span class="text-[10px] font-bold tracking-widest text-nAmarillo uppercase">Trayectoria</span>
-            </div>
-
-            <div class="relative border-l-2 border-white/5 ml-2 space-y-9">
-                <div class="relative pl-7">
-                    <div
-                        class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-nCyan border-4 border-black shadow-[0_0_15px_#00f2ff]">
-                    </div>
-                    <h4 class="text-sm font-bold text-white">Jefe de Mantenimiento</h4>
-                    <p class="text-[10px] text-nCyan font-black uppercase mt-1">Logística Naval | 2020 - Actualidad</p>
-                </div>
-                <div class="relative pl-7">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gray-600 border-4 border-black">
-                    </div>
-                    <h4 class="text-sm font-bold text-gray-300">Mecánico de Flota</h4>
-                    <p class="text-[10px] text-gray-500 font-bold uppercase mt-1">Carga Pesada | 2015 - 2020</p>
-                </div>
-                <div class="relative pl-7">
-                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-gray-800 border-4 border-black">
-                    </div>
-                    <h4 class="text-sm font-bold text-gray-500">Técnico en Maquinaria</h4>
-                    <p class="text-[10px] text-gray-600 font-bold uppercase mt-1">Taller Industrial | 2012 - 2015</p>
+        <footer class="mt-20 text-center flex flex-col items-center justify-center pb-10" data-aos="fade-up">
+            <div class="relative w-20 h-20 flex items-center justify-center mb-4">
+                <div class="absolute inset-0 border border-dashed border-nAmarillo/20 rounded-full sello-rotate"></div>
+                <div class="w-12 h-12 bg-black/60 backdrop-blur-md rounded-full border border-nAmarillo/30 flex items-center justify-center shadow-2xl overflow-hidden">
+                    <img src="Img/Logo-ana-mdq.png" class="w-8 h-8 object-contain opacity-90" alt="Ana MDQ">
                 </div>
             </div>
-        </div>
-
-        <footer class="mt-20 text-center" data-aos="fade-up">
-            <div class="relative w-24 h-24 mx-auto flex items-center justify-center">
-                <div class="absolute inset-0 border border-dashed border-nAmarillo/30 rounded-full sello-rotate"></div>
-                <div
-                    class="w-16 h-16 bg-black/80 backdrop-blur-md rounded-full border border-nAmarillo/50 flex items-center justify-center shadow-2xl overflow-hidden">
-                    <img src="Img/Logo-ana-mdq.png" class="w-10 h-10 object-contain opacity-80" alt="Ana MDQ">
-                </div>
-            </div>
-            <p class="mt-4 text-[8px] font-bold tracking-[5px] text-gray-500 uppercase">Diseñado por ANA MDQ</p>
+            <p class="text-[8px] font-bold tracking-[6px] text-gray-500 uppercase">Diseñado por ANA MDQ</p>
         </footer>
 
-    </div>
+    </main>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
     </script>
 </body>
-
 </html>

@@ -46,8 +46,8 @@
         }
 
         .logo-wrap {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border: 3px solid #ffee55;
             border-radius: 50%;
             background: #000;
@@ -58,12 +58,8 @@
             transition: transform 0.3s ease;
         }
 
-        .logo-wrap:hover {
-            transform: scale(1.05);
-        }
-
         h1 {
-            line-height: 1.3 !important;
+            line-height: 1.1 !important;
         }
 
         .glow-text {
@@ -74,23 +70,20 @@
 
 <body id="inicio">
 
-    <nav class="sticky top-0 z-50 bg-black/95 border-b border-nAmarillo/10 py-4">
+    <nav class="sticky top-0 z-50 bg-black/95 border-b border-nAmarillo/10 py-3">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#inicio" class="flex items-center gap-4 group">
+            <a href="#inicio" class="flex items-center gap-3 group">
                 <div class="logo-wrap">
-                    <img src="Img/Logo-ana-mdq.png" class="w-10 h-10 object-contain rounded-full" alt="Logo">
+                    <img src="Img/Logo-ana-mdq.png" class="w-8 h-8 object-contain rounded-full" alt="Logo">
                 </div>
                 <div class="flex flex-col">
-                    <span
-                        class="font-black text-white text-2xl uppercase tracking-tighter leading-none group-hover:text-nAmarillo transition">ANA
-                        MDQ</span>
-                    <span class="text-[9px] text-nCyan font-bold tracking-[3px] uppercase mt-1 italic">Diseño
-                        Digital</span>
+                    <span class="font-black text-white text-xl uppercase tracking-tighter leading-none group-hover:text-nAmarillo transition">ANA MDQ</span>
+                    <span class="text-[8px] text-nCyan font-bold tracking-[3px] uppercase italic">Diseño Digital</span>
                 </div>
             </a>
 
-            <div class="flex gap-4 md:gap-6 text-[10px] font-bold tracking-widest uppercase">
-                <a href="#inicio" class="hidden md:block text-white hover:text-nAmarillo transition">Inicio</a>
+            <div class="flex gap-3 sm:gap-6 text-[9px] sm:text-[10px] font-bold tracking-widest uppercase items-center">
+                <a href="#inicio" class="hidden sm:block text-white hover:text-nAmarillo transition">Inicio</a>
                 <a href="#beneficios" class="text-nAmarillo hover:text-white transition">Beneficios</a>
                 <a href="#planes" class="text-nCyan hover:text-white transition">Planes</a>
                 <a href="#metodo" class="text-nFucsia hover:text-white transition">Método</a>
@@ -98,164 +91,148 @@
         </div>
     </nav>
 
-    <header class="py-24 text-center px-6">
-        <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+    <header class="py-16 md:py-24 text-center px-6">
+        <h1 class="text-5xl md:text-8xl font-black mb-6 uppercase tracking-tighter">
             Tu imagen <br>
             <span class="text-nCyan glow-text">profesional</span>
         </h1>
-        <p class="text-gray-400 text-lg max-w-xl mx-auto italic">Diseñamos portfolios que abren puertas en el mundo
-            laboral.</p>
+        <p class="text-gray-400 text-base md:text-lg max-w-xl mx-auto italic">Diseñamos portfolios que abren puertas en el mundo laboral.</p>
     </header>
 
     <section class="container mx-auto px-6 mb-20">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="glass p-10 rounded-[40px]">
-                <h2 class="text-3xl font-black mb-6 uppercase italic tracking-tighter">No es solo un CV</h2>
-                <p class="text-gray-400 mb-10 leading-relaxed text-lg">
-                    En <strong>ANA MDQ</strong> no hacemos simples currículums; diseñamos tu <strong>Portfolio
-                        Profesional</strong>. <br><br>
-                    Mientras un CV es solo una lista, un Portfolio es la muestra real de tu valor. Creamos una pieza de
-                    diseño única para que no solo lean tu experiencia, sino que la vean.
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div class="glass p-8 md:p-10 rounded-[40px]">
+                <h2 class="text-2xl md:text-3xl font-black mb-6 uppercase italic tracking-tighter">No es solo un CV</h2>
+                <p class="text-gray-400 mb-10 leading-relaxed text-base">
+                    En <strong>ANA MDQ</strong> no hacemos simples currículums; diseñamos tu <strong>Portfolio Profesional</strong>. <br><br>
+                    Creamos una pieza de diseño única para que no solo lean tu experiencia, sino que la vean.
                 </p>
-                <div class="grid grid-cols-3 gap-4 text-center uppercase font-black text-[9px]">
-                    <a href="#planes"
-                        class="bg-white/5 p-5 rounded-3xl border border-nCyan/20 hover:border-nCyan transition">
-                        <i class="bi bi-layers text-nCyan text-3xl mb-3 block"></i> Planes
+                <div class="grid grid-cols-3 gap-3 text-center uppercase font-black text-[8px] sm:text-[9px]">
+                    <a href="#planes" class="bg-white/5 py-4 rounded-2xl border border-nCyan/20 hover:border-nCyan transition">
+                        <i class="bi bi-layers text-nCyan text-2xl mb-2 block"></i> Planes
                     </a>
-                    <a href="https://wa.me/5492236683498?text=Hola%20ANA%20MDQ!%20Tengo%20una%20consulta"
-                        class="bg-white/5 p-5 rounded-3xl border border-nFucsia/20 hover:border-nFucsia transition">
-                        <i class="bi bi-whatsapp text-nFucsia text-3xl mb-3 block"></i> Consultar
+                    <a href="https://wa.me/5492236683498?text=Hola%20ANA%20MDQ!%20Tengo%20una%20consulta" class="bg-white/5 py-4 rounded-2xl border border-nFucsia/20 hover:border-nFucsia transition">
+                        <i class="bi bi-whatsapp text-nFucsia text-2xl mb-2 block"></i> Consultar
                     </a>
-                    <a href="#metodo"
-                        class="bg-white/5 p-5 rounded-3xl border border-nAmarillo/20 hover:border-nAmarillo transition">
-                        <i class="bi bi-lightning-charge text-nAmarillo text-3xl mb-3 block"></i> Método
+                    <a href="#metodo" class="bg-white/5 py-4 rounded-2xl border border-nAmarillo/20 hover:border-nAmarillo transition">
+                        <i class="bi bi-lightning-charge text-nAmarillo text-2xl mb-2 block"></i> Método
                     </a>
                 </div>
             </div>
             <div class="flex justify-center">
-                <img src="Img/ImagenYesi.jpg"
-                    class="w-64 h-80 object-cover rounded-[50px] border-2 border-white/5 shadow-2xl grayscale hover:grayscale-0 transition duration-700">
+                <img src="Img/ImagenYesi.jpg" class="w-56 h-72 md:w-64 md:h-80 object-cover rounded-[50px] border-2 border-white/5 shadow-2xl grayscale hover:grayscale-0 transition duration-700">
             </div>
         </div>
     </section>
 
-    <section id="beneficios" class="py-24 bg-white/[0.02] border-y border-white/5">
+    <section id="beneficios" class="py-20 bg-white/[0.01] border-y border-white/5">
         <div class="container mx-auto px-6">
-            <h2 class="text-center text-3xl font-black mb-16 uppercase italic tracking-widest">Beneficios de un <span
-                    class="text-nAmarillo">Portfolio Web</span></h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="text-center p-8 glass rounded-[40px] border-nAmarillo/20">
-                    <div class="w-16 h-16 bg-nAmarillo/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <i class="bi bi-qr-code-scan text-nAmarillo text-3xl"></i>
-                    </div>
-                    <h4 class="text-xl font-bold uppercase mb-4 tracking-tighter">Acceso Instantáneo</h4>
-                    <p class="text-sm text-gray-500">Con un link o un código QR, tu perfil está disponible en cualquier
-                        dispositivo al instante.</p>
+            <h2 class="text-center text-2xl md:text-3xl font-black mb-12 uppercase italic tracking-widest">Beneficios <span class="text-nAmarillo">Portfolio Web</span></h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+                <div class="text-center p-8 glass rounded-[40px]">
+                    <i class="bi bi-qr-code-scan text-nAmarillo text-3xl mb-4 block"></i>
+                    <h4 class="text-lg font-bold uppercase mb-2">Acceso Instantáneo</h4>
+                    <p class="text-xs text-gray-500">Link o QR disponible en cualquier dispositivo al instante.</p>
                 </div>
-                <div class="text-center p-8 glass rounded-[40px] border-nFucsia/20">
-                    <div class="w-16 h-16 bg-nFucsia/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <i class="bi bi-stars text-nFucsia text-3xl"></i>
-                    </div>
-                    <h4 class="text-xl font-bold uppercase mb-4 tracking-tighter">Destacás del Resto</h4>
-                    <p class="text-sm text-gray-500">Presentás una experiencia interactiva que demuestra modernidad y
-                        dominio tecnológico.</p>
+                <div class="text-center p-8 glass rounded-[40px]">
+                    <i class="bi bi-stars text-nFucsia text-3xl mb-4 block"></i>
+                    <h4 class="text-lg font-bold uppercase mb-2">Destacás del Resto</h4>
+                    <p class="text-xs text-gray-500">Experiencia interactiva que demuestra dominio tecnológico.</p>
                 </div>
-                <div class="text-center p-8 glass rounded-[40px] border-nCyan/20">
-                    <div class="w-16 h-16 bg-nCyan/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <i class="bi bi-pencil-square text-nCyan text-3xl"></i>
-                    </div>
-                    <h4 class="text-xl font-bold uppercase mb-4 tracking-tighter">100% Personalizado</h4>
-                    <p class="text-sm text-gray-500">Diseño exclusivo desde cero respetando tu esencia y tus objetivos
-                        profesionales.</p>
+                <div class="text-center p-8 glass rounded-[40px] sm:col-span-2 lg:col-span-1">
+                    <i class="bi bi-pencil-square text-nCyan text-3xl mb-4 block"></i>
+                    <h4 class="text-lg font-bold uppercase mb-2">100% Personalizado</h4>
+                    <p class="text-xs text-gray-500">Diseño exclusivo respetando tu esencia y objetivos.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="planes" class="py-24">
+    <section id="planes" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-center text-4xl font-black mb-16 uppercase italic">Elegí tu <span
-                    class="text-nAmarillo">Formato</span></h2>
-            <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-                <div
-                    class="card-portfolio-pdf p-12 rounded-[50px] flex flex-col justify-between shadow-2xl transform hover:scale-[1.03] transition duration-300">
+            <h2 class="text-center text-3xl font-black mb-12 uppercase italic">Elegí tu <span class="text-nAmarillo">Formato</span></h2>
+            <div class="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
+                <div class="card-portfolio-pdf p-10 rounded-[50px] flex flex-col justify-between shadow-2xl transform hover:scale-[1.02] transition">
                     <div>
-                        <i class="bi bi-file-pdf text-4xl text-slate-800 mb-6 block"></i>
-                        <h3 class="text-2xl font-black mb-3 uppercase tracking-tighter text-slate-900">Portfolio PDF
-                        </h3>
-                        <p class="text-slate-600 text-sm mb-8 font-medium">Diseño editorial moderno. Ideal para adjuntar
-                            en mails tradicionales.</p>
-                        <div class="text-5xl font-black mb-10 text-slate-900">$8.000</div>
+                        <i class="bi bi-file-pdf text-4xl mb-4 block"></i>
+                        <h3 class="text-2xl font-black mb-2 uppercase">Portfolio PDF</h3>
+                        <p class="text-slate-600 text-xs mb-6 font-medium">Diseño editorial moderno. Ideal para adjuntar en mails.</p>
+                        <div class="text-4xl font-black mb-8">$8.000</div>
                     </div>
-                    <button onclick="comprar('Portfolio PDF', 8000)"
-                        class="w-full py-5 rounded-2xl bg-slate-900 text-white font-black uppercase text-xs tracking-[2px]">Encargar
-                        PDF</button>
+                    <button onclick="comprar('Portfolio PDF', 8000)" class="w-full py-4 rounded-2xl bg-slate-900 text-white font-black uppercase text-[10px] tracking-widest">Encargar PDF</button>
                 </div>
-
-                <div
-                    class="glass p-12 rounded-[50px] border-2 border-nCyan relative flex flex-col justify-between transform hover:scale-[1.03] transition duration-300">
-                    <div
-                        class="absolute -top-4 right-10 bg-nCyan text-black text-[11px] font-extrabold px-5 py-1.5 rounded-full uppercase">
-                        Sugerido</div>
+                <div class="glass p-10 rounded-[50px] border-2 border-nCyan relative flex flex-col justify-between transform hover:scale-[1.02] transition">
+                    <div class="absolute -top-3 right-8 bg-nCyan text-black text-[10px] font-black px-4 py-1 rounded-full uppercase">Sugerido</div>
                     <div>
-                        <i class="bi bi-globe text-4xl text-nCyan mb-6 block"></i>
-                        <h3 class="text-2xl font-black mb-3 uppercase tracking-tighter text-nCyan">Portfolio Web</h3>
-                        <p class="text-gray-400 text-sm mb-8 font-medium">Tu sitio interactivo con link único. Incluye
-                            QR para tu tarjeta física.</p>
-                        <div class="text-5xl font-black mb-10 glow-text" style="color: #00f2ff">$30.000</div>
+                        <i class="bi bi-globe text-4xl text-nCyan mb-4 block"></i>
+                        <h3 class="text-2xl font-black mb-2 uppercase text-nCyan">Portfolio Web</h3>
+                        <p class="text-gray-400 text-xs mb-6 font-medium">Sitio interactivo con link único y QR incluido.</p>
+                        <div class="text-4xl font-black mb-8 glow-text text-nCyan">$30.000</div>
                     </div>
-                    <div class="space-y-4">
-                        <button onclick="comprar('Portfolio Web', 30000)"
-                            class="w-full py-5 rounded-2xl bg-nCyan text-black font-black uppercase text-xs tracking-[2px]">Quiero
-                            mi Web</button>
-                        <a href="demo.html"
-                            class="w-full py-4 rounded-2xl border-2 border-dashed border-nFucsia text-nFucsia text-center font-bold text-xs block tracking-widest uppercase hover:bg-nFucsia/10 transition">Ver
-                            Demo</a>
+                    <div class="space-y-3">
+                        <button onclick="comprar('Portfolio Web', 30000)" class="w-full py-4 rounded-2xl bg-nCyan text-black font-black uppercase text-[10px] tracking-widest">Quiero mi Web</button>
+                        <a href="demo.html" class="w-full py-3 rounded-2xl border border-nFucsia text-nFucsia text-center font-bold text-[10px] block tracking-widest uppercase">Ver Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <p class="text-center text-[10px] font-bold text-gray-500 uppercase tracking-[4px] mb-8">Modelos PDF disponibles</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                        <img src="Img/Modelo1.png" class="w-full h-full object-cover opacity-60 hover:opacity-100 transition duration-500" alt="Estilo 1">
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                        <img src="Img/Modelo2.png" class="w-full h-full object-cover opacity-60 hover:opacity-100 transition duration-500" alt="Estilo 2">
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                        <img src="Img/Modelo3.png" class="w-full h-full object-cover opacity-60 hover:opacity-100 transition duration-500" alt="Estilo 3">
+                    </div>
+                    <div class="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                        <img src="Img/Modelo4.png" class="w-full h-full object-cover opacity-60 hover:opacity-100 transition duration-500" alt="Estilo 4">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="metodo" class="py-24 border-t border-white/5">
+    <section id="metodo" class="py-20 border-t border-white/5">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-black mb-16 uppercase tracking-[6px]">El Proceso</h2>
-            <div class="grid md:grid-cols-3 gap-12">
+            <h2 class="text-2xl font-black mb-12 uppercase tracking-[4px]">El Proceso</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
                 <div>
-                    <div class="text-nCyan text-5xl font-black mb-4 italic opacity-30">01</div>
-                    <p class="text-xs uppercase font-bold text-white tracking-widest">Enviás tus datos</p>
+                    <div class="text-nCyan text-4xl font-black mb-2 italic opacity-30">01</div>
+                    <p class="text-[10px] uppercase font-bold text-white tracking-widest">Enviás tus datos</p>
                 </div>
                 <div>
-                    <div class="text-nFucsia text-5xl font-black mb-4 italic opacity-30">02</div>
-                    <p class="text-xs uppercase font-bold text-white tracking-widest">Creamos el diseño</p>
+                    <div class="text-nFucsia text-4xl font-black mb-2 italic opacity-30">02</div>
+                    <p class="text-[10px] uppercase font-bold text-white tracking-widest">Creamos el diseño</p>
                 </div>
                 <div>
-                    <div class="text-nAmarillo text-5xl font-black mb-4 italic opacity-30">03</div>
-                    <p class="text-xs uppercase font-bold text-white tracking-widest">Recibís tu Portfolio</p>
+                    <div class="text-nAmarillo text-4xl font-black mb-2 italic opacity-30">03</div>
+                    <p class="text-[10px] uppercase font-bold text-white tracking-widest">Recibís tu Portfolio</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="checkout"
-        class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black border-2 border-nFucsia p-6 rounded-[30px] hidden items-center gap-10 z-50 shadow-2xl">
-        <div class="text-left">
-            <span id="planName" class="text-white font-black text-[10px] block uppercase tracking-widest mb-1"></span>
-            <span class="text-nCyan font-bold text-xl">$<span id="planPrice"></span></span>
+    <div id="checkout" class="fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-auto bg-black border-2 border-nFucsia p-5 rounded-[30px] hidden items-center justify-between gap-6 z-50 shadow-2xl">
+        <div>
+            <span id="planName" class="text-white font-black text-[9px] block uppercase mb-1"></span>
+            <span class="text-nCyan font-bold text-lg">$<span id="planPrice"></span></span>
         </div>
         <a href="#" id="waBtn" onclick="document.getElementById('checkout').style.display = 'none';"
-            class="bg-[#25d366] text-white px-10 py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 transition">Empezar
-            ahora</a>
+            class="bg-[#25d366] text-white px-6 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest transition">Empezar ahora</a>
     </div>
 
-    <footer class="py-16 text-center opacity-30 text-[9px] font-bold tracking-[8px] uppercase">
+    <footer class="py-12 text-center opacity-30 text-[8px] font-bold tracking-[6px] uppercase">
         ANA MDQ • 2026
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
         function comprar(nombre, precio) {
-            confetti({ particleCount: 150, spread: 80, origin: { y: 0.8 }, colors: ['#ff22ff', '#00f2ff', '#ffee55'] });
+            confetti({ particleCount: 100, spread: 70, origin: { y: 0.8 }, colors: ['#ff22ff', '#00f2ff', '#ffee55'] });
             document.getElementById('planName').innerText = nombre;
             document.getElementById('planPrice').innerText = precio;
             const msg = `Hola ANA MDQ! Me interesa el ${nombre}. ¿Hablamos?`;
@@ -264,5 +241,4 @@
         }
     </script>
 </body>
-
 </html>
