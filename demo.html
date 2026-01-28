@@ -96,11 +96,11 @@
         </div>
 
         <div class="grid grid-cols-2 gap-4 mb-16" data-aos="fade-up">
-            <a href="https://api.whatsapp.com/send?phone=5492236683498" class="flex items-center justify-center gap-2 bg-nCyan text-black font-black py-4 rounded-2xl text-[10px] uppercase shadow-lg shadow-nCyan/20">
+            <a href="https://api.whatsapp.com/send?phone=5492236683498&text=Hola%20Marcos!%20Vi%20tu%20Portfolio%20Digital%20y%20quería%20consultarte%20por%20un%20presupuesto." class="flex items-center justify-center gap-2 bg-nCyan text-black font-black py-4 rounded-2xl text-[10px] uppercase shadow-lg shadow-nCyan/20 hover:scale-105 transition-transform">
                 <i class="bi bi-whatsapp"></i> WhatsApp
             </a>
             
-            <a href="tel:2236683498" id="btnLlamar" class="flex items-center justify-center gap-2 bg-white text-black font-black py-4 rounded-2xl text-[10px] uppercase shadow-lg">
+            <a href="tel:2236683498" class="flex items-center justify-center gap-2 bg-white text-black font-black py-4 rounded-2xl text-[10px] uppercase shadow-lg hover:scale-105 transition-transform">
                 <i class="bi bi-telephone-fill"></i> Llamar
             </a>
         </div>
@@ -175,13 +175,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
-
-        // LÓGICA ANTI-CARTEL AZUL EN PC
-        if (!/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-            const btn = document.getElementById('btnLlamar');
-            // Si está en PC, lo mandamos a WhatsApp directo para evitar el error de Windows
-            btn.href = "https://api.whatsapp.com/send?phone=5492236683498&text=Hola!%20Te%20contacto%20desde%20tu%20Portfolio%20Digital.";
-        }
     </script>
 </body>
 </html>
