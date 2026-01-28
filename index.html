@@ -1,200 +1,268 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana MDQ | CVs Profesionales</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <title>ANA MDQ | Portfolio & Diseño Digital</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nFucsia: '#ff22ff',
+                        nCyan: '#00f2ff',
+                        nAmarillo: '#ffee55',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        :root { --accent: #00f2ff; --dark: #0a0a0a; --light: #ffffff; }
-        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; scroll-behavior: smooth; overflow-x: hidden; }
-        
-        /* NAVBAR Y LOGO */
-        .navbar { background-color: var(--dark); border-bottom: 2px solid var(--accent); padding: 10px 0; }
-        .logo-box {
-            background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            border: 2px solid var(--accent); box-shadow: 0 0 15px rgba(0, 242, 255, 0.8);
-            width: 55px; height: 55px; overflow: hidden;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #050505;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
         }
-        .logo-nav { height: 100%; width: 100%; object-fit: cover; }
 
-        /* HERO */
-        .hero { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); color: white; padding: 80px 0 60px; }
-        
-        /* FOTO PERFIL */
-        .foto-perfil {
-            width: 280px; height: 280px; object-fit: cover; border-radius: 50%;
-            border: 5px solid var(--accent); box-shadow: 0 20px 50px rgba(0, 242, 255, 0.3);
-            animation: float 4s ease-in-out infinite;
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 
-        /* PRESENTACIÓN */
-        .presentacion-box { background: white; border-radius: 30px; padding: 40px; border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .feature-box { text-align: center; padding: 20px 15px; border-radius: 20px; background: #f8f9fa; border: 1px solid #eee; transition: 0.3s; height: 100%; }
-        .feature-box:hover { background: #f0fdff; border-color: var(--accent); transform: scale(1.02); }
-        .feature-box i { font-size: 2.2rem; color: #008fa5; margin-bottom: 12px; display: block; }
-
-        /* CARDS */
-        .card-custom { border: none; border-radius: 25px; transition: 0.3s; background: white; border: 1px solid #eee; position: relative; }
-        .card-custom:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .card-premium { border: 2px solid var(--accent); background: #f0fdff; }
-        .entrega-tag { font-size: 0.85rem; font-weight: 700; color: #008fa5; margin-bottom: 10px; display: block; text-transform: uppercase; }
-        
-        /* BOTONES */
-        .btn-demo { 
-            background: white; color: #008fa5; border: 2px solid #008fa5; 
-            padding: 8px 20px; border-radius: 50px; font-weight: bold; 
-            margin-top: 15px; text-decoration: none; display: inline-block; transition: 0.3s;
+        .card-portfolio-pdf {
+            background: linear-gradient(145deg, #ffffff 0%, #e2e8f0 100%);
+            color: #0f172a;
+            border: 2px solid #ffffff;
         }
-        .btn-demo:hover { background: #008fa5; color: white; }
-        .btn-secundario { color: #008fa5; font-size: 0.9rem; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; cursor: pointer; border: none; background: none; }
 
-        /* CHECKOUT */
-        .checkout-bar {
-            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
-            background: rgba(0,0,0,0.95); backdrop-filter: blur(10px);
-            color: white; padding: 15px 35px; border-radius: 100px;
-            display: none; align-items: center; gap: 30px; z-index: 2000; border: 1px solid var(--accent);
+        .logo-wrap {
+            width: 60px;
+            height: 60px;
+            border: 3px solid #ffee55;
+            border-radius: 50%;
+            background: #000;
+            box-shadow: 0 0 15px rgba(255, 238, 85, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
         }
-        .btn-wa { background: #25d366; color: white; border: none; padding: 12px 25px; border-radius: 50px; font-weight: bold; text-decoration: none; }
+
+        .logo-wrap:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            line-height: 1.3 !important;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+        }
     </style>
 </head>
-<body>
 
-    <nav class="navbar sticky-top">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <div class="logo-box">
-                    <img src="Img/Logo-ana-mdq.png" class="logo-nav" alt="Logo">
+<body id="inicio">
+
+    <nav class="sticky top-0 z-50 bg-black/95 border-b border-nAmarillo/10 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center gap-4 group">
+                <div class="logo-wrap">
+                    <img src="Img/Logo-ana-mdq.png" class="w-10 h-10 object-contain rounded-full" alt="Logo">
                 </div>
-                <span class="ms-3 text-white fw-bold">ANA MDQ</span>
+                <div class="flex flex-col">
+                    <span
+                        class="font-black text-white text-2xl uppercase tracking-tighter leading-none group-hover:text-nAmarillo transition">ANA
+                        MDQ</span>
+                    <span class="text-[9px] text-nCyan font-bold tracking-[3px] uppercase mt-1 italic">Diseño
+                        Digital</span>
+                </div>
             </a>
-            <div class="d-flex gap-2">
-                <span class="badge bg-dark border border-info text-info">ES</span>
-                <span class="badge bg-dark border border-info text-info">IT</span>
-                <span class="badge bg-dark border border-info text-info">EN</span>
+
+            <div class="flex gap-4 md:gap-6 text-[10px] font-bold tracking-widest uppercase">
+                <a href="#inicio" class="hidden md:block text-white hover:text-nAmarillo transition">Inicio</a>
+                <a href="#beneficios" class="text-nAmarillo hover:text-white transition">Beneficios</a>
+                <a href="#planes" class="text-nCyan hover:text-white transition">Planes</a>
+                <a href="#metodo" class="text-nFucsia hover:text-white transition">Método</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero text-center">
-        <div class="container">
-            <h1 class="display-5 fw-bold">Un buen CV te abre las <span style="color: var(--accent);">puertas</span></h1>
-            <p class="lead opacity-75">Diseño profesional en PDF para que tu perfil destaque de verdad.</p>
-        </div>
+    <header class="py-24 text-center px-6">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter">
+            Tu imagen <br>
+            <span class="text-nCyan glow-text">profesional</span>
+        </h1>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto italic">Diseñamos portfolios que abren puertas en el mundo
+            laboral.</p>
     </header>
 
-    <section class="container my-5 py-4">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-7">
-                <div class="presentacion-box">
-                    <h2 class="fw-bold mb-3">Hola, soy <span style="color: #008fa5;">Yesi</span></h2>
-                    <p class="fs-5 text-secondary">
-                        Soy <strong>Fullstack Developer & Analista de Datos</strong>. Sé lo que buscan las empresas hoy: claridad, orden y un perfil que resuelva problemas.
-                    </p>
-                    
-                    <div class="row g-3 mt-4">
-                        <div class="col-md-4">
-                            <div class="feature-box">
-                                <i class="bi bi-pencil-square"></i>
-                                <h6>Diseño Limpio</h6>
-                                <p>Formatos modernos que dan gusto leer.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-box">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <h6>Orden Lógico</h6>
-                                <p>Resaltamos lo que los reclutadores quieren ver.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="feature-box">
-                                <i class="bi bi-rocket-takeoff"></i>
-                                <h6>Impacto Directo</h6>
-                                <p>Tu experiencia contada de forma profesional.</p>
-                            </div>
-                        </div>
-                    </div>
+    <section class="container mx-auto px-6 mb-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="glass p-10 rounded-[40px]">
+                <h2 class="text-3xl font-black mb-6 uppercase italic tracking-tighter">No es solo un CV</h2>
+                <p class="text-gray-400 mb-10 leading-relaxed text-lg">
+                    En <strong>ANA MDQ</strong> no hacemos simples currículums; diseñamos tu <strong>Portfolio
+                        Profesional</strong>. <br><br>
+                    Mientras un CV es solo una lista, un Portfolio es la muestra real de tu valor. Creamos una pieza de
+                    diseño única para que no solo lean tu experiencia, sino que la vean.
+                </p>
+                <div class="grid grid-cols-3 gap-4 text-center uppercase font-black text-[9px]">
+                    <a href="#planes"
+                        class="bg-white/5 p-5 rounded-3xl border border-nCyan/20 hover:border-nCyan transition">
+                        <i class="bi bi-layers text-nCyan text-3xl mb-3 block"></i> Planes
+                    </a>
+                    <a href="https://wa.me/5492236683498?text=Hola%20ANA%20MDQ!%20Tengo%20una%20consulta"
+                        class="bg-white/5 p-5 rounded-3xl border border-nFucsia/20 hover:border-nFucsia transition">
+                        <i class="bi bi-whatsapp text-nFucsia text-3xl mb-3 block"></i> Consultar
+                    </a>
+                    <a href="#metodo"
+                        class="bg-white/5 p-5 rounded-3xl border border-nAmarillo/20 hover:border-nAmarillo transition">
+                        <i class="bi bi-lightning-charge text-nAmarillo text-3xl mb-3 block"></i> Método
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-5 text-center">
-                <img src="Img/ImagenYesi.jpg" class="foto-perfil" alt="Yesi">
+            <div class="flex justify-center">
+                <img src="Img/ImagenYesi.jpg"
+                    class="w-64 h-80 object-cover rounded-[50px] border-2 border-white/5 shadow-2xl grayscale hover:grayscale-0 transition duration-700">
             </div>
         </div>
     </section>
 
-    <section id="planes" class="py-5 bg-white text-center">
-        <div class="container">
-            <h2 class="fw-bold mb-5">Nuestros Planes</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-5">
-                    <div class="card card-custom p-5 h-100">
-                        <span class="entrega-tag"><i class="bi bi-lightning-charge-fill"></i> Entrega en 24hs</span>
-                        <h3 class="fw-bold">CV en PDF</h3>
-                        <p class="text-muted">Diseño profesional armado en Canva con criterio técnico.</p>
-                        <div class="display-5 fw-bold my-3">$8.000</div>
-                        <p class="badge bg-danger mb-4">SEÑA $4.000</p>
-                        <button onclick="comprar('CV PDF Estándar', 8000, 4000)" class="btn btn-dark w-100 rounded-pill py-3 fw-bold">RESERVAR AHORA</button>
-                        <a href="#modelos" class="btn-secundario">VER MODELOS DISPONIBLES →</a>
+    <section id="beneficios" class="py-24 bg-white/[0.02] border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-3xl font-black mb-16 uppercase italic tracking-widest">Beneficios de un <span
+                    class="text-nAmarillo">Portfolio Web</span></h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center p-8 glass rounded-[40px] border-nAmarillo/20">
+                    <div class="w-16 h-16 bg-nAmarillo/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="bi bi-qr-code-scan text-nAmarillo text-3xl"></i>
                     </div>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-tighter">Acceso Instantáneo</h4>
+                    <p class="text-sm text-gray-500">Con un link o un código QR, tu perfil está disponible en cualquier
+                        dispositivo al instante.</p>
                 </div>
-                <div class="col-md-5">
-                    <div class="card card-custom card-premium p-5 h-100">
-                        <span class="entrega-tag"><i class="bi bi-clock-history"></i> Entrega en 4 días</span>
-                        <h3 class="fw-bold">Premium Web</h3>
-                        <p class="text-muted">Landing Page personal + PDF + QR interactivo.</p>
-                        <div class="display-5 fw-bold my-3 text-info">$30.000</div>
-                        <p class="badge bg-danger mb-4">SEÑA $15.000</p>
-                        <button onclick="comprar('Perfil Web Premium', 30000, 15000)" class="btn btn-info text-white w-100 rounded-pill py-3 fw-bold shadow-sm">SOLICITAR WEB 🚀</button>
-                        <a href="demo.html" class="btn-demo"><i class="bi bi-eye"></i> VER DEMO ONLINE</a>
+                <div class="text-center p-8 glass rounded-[40px] border-nFucsia/20">
+                    <div class="w-16 h-16 bg-nFucsia/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="bi bi-stars text-nFucsia text-3xl"></i>
                     </div>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-tighter">Destacás del Resto</h4>
+                    <p class="text-sm text-gray-500">Presentás una experiencia interactiva que demuestra modernidad y
+                        dominio tecnológico.</p>
+                </div>
+                <div class="text-center p-8 glass rounded-[40px] border-nCyan/20">
+                    <div class="w-16 h-16 bg-nCyan/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="bi bi-pencil-square text-nCyan text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold uppercase mb-4 tracking-tighter">100% Personalizado</h4>
+                    <p class="text-sm text-gray-500">Diseño exclusivo desde cero respetando tu esencia y tus objetivos
+                        profesionales.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="modelos" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2 class="fw-bold mb-5">Catálogo de Modelos</h2>
-            <div class="row g-4">
-                <div class="col-6 col-lg-3"><img src="Img/Modelo1.png" class="img-fluid rounded-4 border shadow-sm"></div>
-                <div class="col-6 col-lg-3"><img src="Img/Modelo2.png" class="img-fluid rounded-4 border shadow-sm"></div>
-                <div class="col-6 col-lg-3"><img src="Img/Modelo3.png" class="img-fluid rounded-4 border shadow-sm"></div>
-                <div class="col-6 col-lg-3"><img src="Img/Modelo4.png" class="img-fluid rounded-4 border shadow-sm"></div>
+    <section id="planes" class="py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-4xl font-black mb-16 uppercase italic">Elegí tu <span
+                    class="text-nAmarillo">Formato</span></h2>
+            <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <div
+                    class="card-portfolio-pdf p-12 rounded-[50px] flex flex-col justify-between shadow-2xl transform hover:scale-[1.03] transition duration-300">
+                    <div>
+                        <i class="bi bi-file-pdf text-4xl text-slate-800 mb-6 block"></i>
+                        <h3 class="text-2xl font-black mb-3 uppercase tracking-tighter text-slate-900">Portfolio PDF
+                        </h3>
+                        <p class="text-slate-600 text-sm mb-8 font-medium">Diseño editorial moderno. Ideal para adjuntar
+                            en mails tradicionales.</p>
+                        <div class="text-5xl font-black mb-10 text-slate-900">$8.000</div>
+                    </div>
+                    <button onclick="comprar('Portfolio PDF', 8000)"
+                        class="w-full py-5 rounded-2xl bg-slate-900 text-white font-black uppercase text-xs tracking-[2px]">Encargar
+                        PDF</button>
+                </div>
+
+                <div
+                    class="glass p-12 rounded-[50px] border-2 border-nCyan relative flex flex-col justify-between transform hover:scale-[1.03] transition duration-300">
+                    <div
+                        class="absolute -top-4 right-10 bg-nCyan text-black text-[11px] font-extrabold px-5 py-1.5 rounded-full uppercase">
+                        Sugerido</div>
+                    <div>
+                        <i class="bi bi-globe text-4xl text-nCyan mb-6 block"></i>
+                        <h3 class="text-2xl font-black mb-3 uppercase tracking-tighter text-nCyan">Portfolio Web</h3>
+                        <p class="text-gray-400 text-sm mb-8 font-medium">Tu sitio interactivo con link único. Incluye
+                            QR para tu tarjeta física.</p>
+                        <div class="text-5xl font-black mb-10 glow-text" style="color: #00f2ff">$30.000</div>
+                    </div>
+                    <div class="space-y-4">
+                        <button onclick="comprar('Portfolio Web', 30000)"
+                            class="w-full py-5 rounded-2xl bg-nCyan text-black font-black uppercase text-xs tracking-[2px]">Quiero
+                            mi Web</button>
+                        <a href="demo.html"
+                            class="w-full py-4 rounded-2xl border-2 border-dashed border-nFucsia text-nFucsia text-center font-bold text-xs block tracking-widest uppercase hover:bg-nFucsia/10 transition">Ver
+                            Demo</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div id="checkout" class="checkout-bar">
-        <div>
-            <span id="planName" class="fw-bold text-info"></span>
-            <div class="small opacity-50">Total: $<span id="planPrice"></span></div>
+    <section id="metodo" class="py-24 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black mb-16 uppercase tracking-[6px]">El Proceso</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="text-nCyan text-5xl font-black mb-4 italic opacity-30">01</div>
+                    <p class="text-xs uppercase font-bold text-white tracking-widest">Enviás tus datos</p>
+                </div>
+                <div>
+                    <div class="text-nFucsia text-5xl font-black mb-4 italic opacity-30">02</div>
+                    <p class="text-xs uppercase font-bold text-white tracking-widest">Creamos el diseño</p>
+                </div>
+                <div>
+                    <div class="text-nAmarillo text-5xl font-black mb-4 italic opacity-30">03</div>
+                    <p class="text-xs uppercase font-bold text-white tracking-widest">Recibís tu Portfolio</p>
+                </div>
+            </div>
         </div>
-        <a href="#" id="waBtn" class="btn-wa">RESERVAR POR WHATSAPP <i class="bi bi-whatsapp"></i></a>
+    </section>
+
+    <div id="checkout"
+        class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black border-2 border-nFucsia p-6 rounded-[30px] hidden items-center gap-10 z-50 shadow-2xl">
+        <div class="text-left">
+            <span id="planName" class="text-white font-black text-[10px] block uppercase tracking-widest mb-1"></span>
+            <span class="text-nCyan font-bold text-xl">$<span id="planPrice"></span></span>
+        </div>
+        <a href="#" id="waBtn"
+            class="bg-[#25d366] text-white px-10 py-4 rounded-2xl font-black text-xs uppercase tracking-widest hover:scale-105 transition">Empezar
+            ahora</a>
     </div>
 
-    <footer class="py-5 bg-dark text-white text-center">
-        <p class="mb-0 opacity-50 small">ANA MDQ | MAR DEL PLATA | 2026</p>
+    <footer class="py-16 text-center opacity-30 text-[9px] font-bold tracking-[8px] uppercase">
+        ANA MDQ • 2026
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
-        const miNumero = "5492236683498"; 
-
-        function comprar(nombre, precio, sena) {
-            confetti({ particleCount: 150, spread: 70, origin: { y: 0.8 }, colors: ['#00f2ff', '#ffffff'] });
-            const msg = `Hola Yesi! Quiero el plan *${nombre}* ($${precio}). Pasame los datos para la seña de $${sena}.`;
+        function comprar(nombre, precio) {
+            confetti({ particleCount: 150, spread: 80, origin: { y: 0.8 }, colors: ['#ff22ff', '#00f2ff', '#ffee55'] });
             document.getElementById('planName').innerText = nombre;
             document.getElementById('planPrice').innerText = precio;
-            document.getElementById('waBtn').href = `https://wa.me/${miNumero}?text=${encodeURIComponent(msg)}`;
+            const msg = `Hola ANA MDQ! Me interesa el ${nombre}. ¿Hablamos?`;
+            document.getElementById('waBtn').href = `https://wa.me/5492236683498?text=${encodeURIComponent(msg)}`;
             document.getElementById('checkout').style.display = 'flex';
         }
     </script>
 </body>
+
 </html>
