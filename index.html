@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANA MDQ | Portfolio & Diseño Digital</title>
+    <!-- Etiquetas optimizadas para Google / SEO -->
+    <title>Hecho por Ana Mdq Cv | Portfolio & Diseño Digital en Mar del Plata</title>
+    <meta name="description" content="Diseño de portfolios profesionales, landing pages y páginas web interactivas en Mar del Plata. ¡Elegí tus servicios, sumalos al carrito y pagá con Mercado Pago o WhatsApp!">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
@@ -19,6 +21,8 @@
                         nFucsia: '#ff22ff',
                         nCyan: '#00f2ff',
                         nAmarillo: '#ffee55',
+                        mpBlue: '#009ee3',
+                        mpBlueDark: '#0082be'
                     }
                 }
             }
@@ -90,6 +94,15 @@
             background: conic-gradient(#ff22ff, #00f2ff, #ffee55, #ff22ff);
             animation: rotate-gradient 4s linear infinite;
         }
+
+        /* Animación para llamar la atención en el botón del carrito */
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+        .animate-cart-pulse {
+            animation: bounce-subtle 2s ease-in-out infinite;
+        }
     </style>
 </head>
 
@@ -111,11 +124,20 @@
                 </div>
             </a>
 
-            <div class="flex gap-3 sm:gap-6 text-[9px] sm:text-[10px] font-bold tracking-widest uppercase items-center">
-                <a href="#inicio" class="text-white hover:text-nAmarillo transition">Inicio</a>
-                <a href="#beneficios" class="text-nAmarillo hover:text-white transition">Beneficios</a>
-                <a href="#planes" class="text-nCyan hover:text-white transition">Planes</a>
-                <a href="#metodo" class="text-nFucsia hover:text-white transition">Método</a>
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:flex gap-6 text-[10px] font-bold tracking-widest uppercase items-center">
+                    <a href="#inicio" class="text-white hover:text-nAmarillo transition">Inicio</a>
+                    <a href="#beneficios" class="text-nAmarillo hover:text-white transition">Beneficios</a>
+                    <a href="#planes" class="text-nCyan hover:text-white transition">Planes</a>
+                    <a href="#metodo" class="text-nFucsia hover:text-white transition">Método</a>
+                </div>
+
+                <!-- Botón de Carrito Atractivo con Animación y Efectos -->
+                <button onclick="toggleCarrito()" class="relative bg-gradient-to-r from-nCyan/20 to-nFucsia/20 hover:from-nCyan/30 hover:to-nFucsia/30 border-2 border-nCyan text-white px-4 py-2.5 rounded-2xl transition flex items-center gap-2.5 cursor-pointer shadow-[0_0_20px_rgba(0,242,255,0.2)] animate-cart-pulse">
+                    <i class="bi bi-cart3 text-nCyan text-lg"></i>
+                    <span class="hidden md:inline font-black text-[10px] uppercase tracking-widest text-nCyan">Carrito</span>
+                    <span id="cartCount" class="bg-nFucsia text-black font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center shadow-md scale-105">0</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -192,7 +214,7 @@
                             <div class="text-4xl font-black mb-6 text-nFucsia glow-text-fucsia">$30.000</div>
                         </div>
                         <div class="space-y-4">
-                            <button onclick="comprar('Landing Page para mi Negocio', '30.000')" class="w-full py-5 rounded-2xl bg-nFucsia text-black font-black uppercase text-[12px] tracking-widest hover:scale-105 transition shadow-[0_0_20px_rgba(255,34,255,0.3)]">Iniciar Proyecto</button>
+                            <button onclick="agregarAlCarrito('Landing Page para mi Negocio', 30000)" class="w-full py-5 rounded-2xl bg-nFucsia text-black font-black uppercase text-[12px] tracking-widest hover:scale-105 transition shadow-[0_0_20px_rgba(255,34,255,0.3)] cursor-pointer">Agregar al Carrito</button>
                             <a href="https://tinyurl.com/barberia-urban-mdp" target="_blank" class="w-full py-3 rounded-2xl border border-gray-700 text-gray-400 text-center font-bold text-[10px] block tracking-widest uppercase hover:border-nFucsia hover:text-nFucsia transition">Ver Demo Negocios</a>
                         </div>
                     </div>
@@ -207,7 +229,7 @@
                         <p class="text-slate-600 text-xs mb-6 font-medium">Diseño editorial moderno. Ideal para adjuntar.</p>
                         <div class="text-4xl font-black mb-8">$6.000</div>
                     </div>
-                    <button onclick="comprar('Portfolio PDF', '6.000')" class="w-full py-4 rounded-2xl bg-slate-900 text-white font-black uppercase text-[10px] tracking-widest">Encargar PDF</button>
+                    <button onclick="agregarAlCarrito('Portfolio PDF', 6000)" class="w-full py-4 rounded-2xl bg-slate-900 text-white font-black uppercase text-[10px] tracking-widest hover:bg-slate-800 transition cursor-pointer">Agregar al Carrito</button>
                 </div>
 
                 <div class="glass p-10 rounded-[50px] border-2 border-nCyan relative flex flex-col justify-between">
@@ -219,7 +241,7 @@
                         <div class="text-4xl font-black mb-8 glow-text text-nCyan">$15.000</div>
                     </div>
                     <div class="space-y-3">
-                        <button onclick="comprar('Portfolio Web', '15.000')" class="w-full py-4 rounded-2xl bg-nCyan text-black font-black uppercase text-[10px] tracking-widest">Quiero mi Web</button>
+                        <button onclick="agregarAlCarrito('Portfolio Web', 15000)" class="w-full py-4 rounded-2xl bg-nCyan text-black font-black uppercase text-[10px] tracking-widest hover:opacity-90 transition cursor-pointer">Agregar al Carrito</button>
                         <a href="demo.html" class="w-full py-3 rounded-2xl border border-nCyan/30 text-nCyan text-center font-bold text-[10px] block tracking-widest uppercase hover:bg-nCyan/10 transition">Ver Demo Web</a>
                     </div>
                 </div>
@@ -254,23 +276,120 @@
         ANA MDQ • 2026
     </footer>
 
-    <div id="checkout" class="fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-auto bg-black border-2 border-nFucsia p-5 rounded-[30px] hidden items-center justify-between gap-6 z-50 shadow-2xl">
-        <div>
-            <span id="planName" class="text-white font-black text-[9px] block uppercase mb-1"></span>
-            <span class="text-nCyan font-bold text-lg">$<span id="planPrice"></span></span>
+    <!-- CARRITOR PANEL LATERAL / MODAL MODERNO -->
+    <div id="cartModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden justify-end transition-all">
+        <div class="bg-black border-l border-nCyan/30 w-full max-w-md h-full flex flex-col justify-between p-6 shadow-2xl">
+            <div>
+                <div class="flex justify-between items-center border-b border-gray-800 pb-4 mb-6">
+                    <div class="flex items-center gap-2">
+                        <i class="bi bi-cart-fill text-nCyan text-xl"></i>
+                        <h3 class="text-white font-black uppercase text-sm tracking-widest">Tu Carrito Digital</h3>
+                    </div>
+                    <button onclick="toggleCarrito()" class="text-gray-400 hover:text-white text-xl cursor-pointer"><i class="bi bi-x-lg"></i></button>
+                </div>
+
+                <!-- Lista dinámicas de ítems del carrito -->
+                <div id="cartItems" class="space-y-4 max-h-[50vh] overflow-y-auto pr-2">
+                    <!-- Se llena con JavaScript -->
+                </div>
+            </div>
+
+            <!-- Total y Botones de Pago / WhatsApp -->
+            <div class="border-t border-gray-800 pt-4 space-y-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-400 text-xs uppercase font-bold">Total a abonar:</span>
+                    <span id="cartTotal" class="text-nCyan font-black text-2xl">$0</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="#" id="waCartBtn" onclick="enviarWhatsApp()" class="bg-[#25d366] text-black py-3 rounded-xl font-black text-[10px] uppercase tracking-widest text-center flex items-center justify-center gap-1 transition hover:opacity-95 shadow-lg">
+                        <i class="bi bi-whatsapp text-sm"></i> WhatsApp
+                    </a>
+                    <a href="https://link.mercadopago.com.ar/tuusuario" target="_blank" class="bg-mpBlue text-white py-3 rounded-xl font-black text-[10px] uppercase tracking-widest text-center flex items-center justify-center gap-1 transition hover:bg-mpBlueDark shadow-lg">
+                        <i class="bi bi-credit-card text-sm"></i> Mercado Pago
+                    </a>
+                </div>
+            </div>
         </div>
-        <a href="#" id="waBtn" class="bg-[#25d366] text-white px-6 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest transition">Empezar ahora</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
-        function comprar(nombre, precio) {
-            confetti({ particleCount: 100, spread: 70, origin: { y: 0.8 }, colors: ['#ff22ff', '#00f2ff', '#ffee55'] });
-            document.getElementById('planName').innerText = nombre;
-            document.getElementById('planPrice').innerText = precio;
-            const msg = `Hola Ana! Me interesa el servicio de ${nombre}. ¿Me contás cómo arrancamos?`;
-            document.getElementById('waBtn').href = `https://wa.me/5492236683498?text=${encodeURIComponent(msg)}`;
-            document.getElementById('checkout').style.display = 'flex';
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            confetti({ particleCount: 80, spread: 60, origin: { y: 0.8 }, colors: ['#ff22ff', '#00f2ff', '#ffee55'] });
+            
+            const index = carrito.findIndex(item => item.nombre === nombre);
+            if (index > -1) {
+                carrito[index].cantidad += 1;
+            } else {
+                carrito.push({ nombre, precio, cantidad: 1 });
+            }
+            
+            actualizarCarritoUI();
+            toggleCarrito(); // Abre el carrito automáticamente para mostrar lo que se sumó
+        }
+
+        function cambiarCantidad(index, delta) {
+            carrito[index].cantidad += delta;
+            if (carrito[index].cantidad <= 0) {
+                carrito.splice(index, 1);
+            }
+            actualizarCarritoUI();
+        }
+
+        function actualizarCarritoUI() {
+            const countEl = document.getElementById('cartCount');
+            const itemsEl = document.getElementById('cartItems');
+            const totalEl = document.getElementById('cartTotal');
+
+            let totalCount = 0;
+            let totalPrice = 0;
+            let html = '';
+
+            if (carrito.length === 0) {
+                html = `<p class="text-gray-500 text-xs text-center py-16 uppercase tracking-widest">Tu carrito está vacío</p>`;
+            } else {
+                carrito.forEach((item, index) => {
+                    totalCount += item.cantidad;
+                    totalPrice += item.precio * item.cantidad;
+                    html += `
+                        <div class="flex justify-between items-center bg-white/5 p-3.5 rounded-xl border border-white/10">
+                            <div>
+                                <h4 class="text-white font-bold text-xs uppercase mb-1">${item.nombre}</h4>
+                                <span class="text-nCyan text-xs font-bold">$${(item.precio * item.cantidad).toLocaleString()}</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <button onclick="cambiarCantidad(${index}, -1)" class="bg-white/10 text-white w-7 h-7 rounded-lg text-xs font-bold cursor-pointer hover:bg-white/20 transition">-</button>
+                                <span class="text-white text-xs font-bold">${item.cantidad}</span>
+                                <button onclick="cambiarCantidad(${index}, 1)" class="bg-white/10 text-white w-7 h-7 rounded-lg text-xs font-bold cursor-pointer hover:bg-white/20 transition">+</button>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            countEl.innerText = totalCount;
+            itemsEl.innerHTML = html;
+            totalEl.innerText = '$' + totalPrice.toLocaleString();
+        }
+
+        function toggleCarrito() {
+            const modal = document.getElementById('cartModal');
+            if (modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            } else {
+                modal.style.display = 'flex';
+            }
+        }
+
+        function enviarWhatsApp() {
+            if (carrito.length === 0) return;
+            let detalle = carrito.map(item => `${item.cantidad}x ${item.nombre} ($${(item.precio * item.cantidad).toLocaleString()})`).join(', ');
+            let total = carrito.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
+            let msg = `Hola Ana! Quiero encargar lo siguiente: ${detalle}. Total: $${total.toLocaleString()}. ¿Cómo seguimos?`;
+            document.getElementById('waCartBtn').href = `https://wa.me/5492236683498?text=${encodeURIComponent(msg)}`;
         }
     </script>
 </body>
